@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Footer from '../../components/footer/Footer';
 import Navbar from '../../components/navbars/Navbar';
 
 const Legal = () => {
@@ -353,6 +354,7 @@ const Legal = () => {
         </div>
       </div>
     </div>
+    <Footer />
     </>
   );
 };
