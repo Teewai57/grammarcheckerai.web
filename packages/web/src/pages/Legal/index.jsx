@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Navbar from '../../components/navbars/Navbar';
 
 const Legal = () => {
   const [showModal, setShowModal] = useState(false);
@@ -7,6 +8,10 @@ const Legal = () => {
   const [showModalFour, setShowModalFour] = useState(false);
 
   return (
+    <>
+    <div className="max-w-8xl mx-auto">
+    <Navbar />
+    </div>
     <div className="max-w-6xl mx-auto p-4">
       <div className="text-center items-center py-5 mt-[10rem] space-y-5">
         <h1 className="md:text-5xl text-3xl font-bold text-[#0B303E] text-center">Legal Information and Resources</h1>
@@ -348,6 +353,7 @@ const Legal = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

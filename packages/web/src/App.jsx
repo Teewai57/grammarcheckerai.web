@@ -10,10 +10,9 @@ import Forgotpassword from './modules/auth/forgot-password/forgot';
 import ResetLink from './modules/auth/reset-password/reset';
 import TermsOfUse from './modules/static/terms_of_use';
 import DashboardLayout from './components/DashboardLayout';
-import { HomePage, History, Correction, ConversationPage, LandingPage } from './pages';
+import { HomePage, History, Correction, ConversationPage, LandingPage, LegalPage } from './pages';
 
 
-import {LandingPage} from './pages';
 // All routes/pages must be import from ./pages folder
 const router = createBrowserRouter( 
   createRoutesFromElements(
