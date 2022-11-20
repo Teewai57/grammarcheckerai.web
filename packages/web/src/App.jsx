@@ -10,10 +10,9 @@ import Forgotpassword from './modules/auth/forgot-password/forgot';
 import ResetLink from './modules/auth/reset-password/reset';
 import TermsOfUse from './modules/static/terms_of_use';
 import DashboardLayout from './components/DashboardLayout';
-import { HomePage, History, Correction, ConversationPage, LandingPage } from './pages';
+import { HomePage, History, Correction, ConversationPage, LandingPage, LegalPage } from './pages';
 
 
-import {LandingPage} from './pages';
 // All routes/pages must be import from ./pages folder
 const router = createBrowserRouter( 
   createRoutesFromElements(
@@ -32,6 +31,7 @@ const router = createBrowserRouter(
       <Route path="/culture-career" element={<h1>Culture Page</h1>} />
       <Route path="/terms-of-use" element={<TermsOfUse />} />
       <Route path="/api-status" element={<h1>Api status Page</h1>} />
+      <Route path="/legal" element={<LegalPage />} />
       <Route
         element={
           <div>
