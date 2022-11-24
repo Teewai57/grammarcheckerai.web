@@ -23,7 +23,7 @@ const grammerErrors = {
   ],
 };
 
-function Errors({ id }) {
+function Errors({ id,setToggleComp  }) {
   const navigate = useNavigate();
   return (
     <div className="my-6">
@@ -33,7 +33,8 @@ function Errors({ id }) {
           <button
             className=" mt-4 outline-none text-[#279371] font-normal sm:text-base text-sm font-['DM_Sans']"
             onClick={() => {
-              navigate('/correction');
+              // navigate('/correction');
+              setToggleComp(false)
             }}
           >
             Check

@@ -3,6 +3,8 @@ import Errors from './errors';
 import search from '../../../assets/search.svg';
 import arrowDown from '../../../assets/arrowDown.svg';
 import arrowUp from '../../../assets/arrowUp.svg';
+import Correction from './correction';
+import back from '../../../assets/arrow-left.svg';
 
 const historyDays = [
   { id: '1', date: 'Today - Thursday, 19 September 2022' },
@@ -11,12 +13,19 @@ const historyDays = [
   { id: '4', date: 'Last month' },
 ];
 
+
+
 function History() {
+
   const [openId, setOpenId] = useState(null);
   const [open, setOpen] = useState(false);
+  const [toggleComp,setToggleComp] = useState(true)
+
   return (
     <div className="flex flex-col pt-16 md:ml-[62px] md:mr-[9rem] sm:mx-[70px] mx-6">
-      <div className="flex items-center sm:justify-between justify-end">
+
+{ toggleComp ?  
+      (<div className="flex items-center sm:justify-between justify-end">
         <h1 className="text-[#393939] text-[32px] font-bold font-['DM_Sans'] leading-10">History</h1>
         <div className="sm:flex-[.95] flex-[.5] w-full relative">
           <input
@@ -32,10 +41,21 @@ function History() {
           >
             <img src={search} alt="search icon" />
           </button>
-        </div>
       </div>
-      <div className="flex flex-col items-start md:ml-[7rem] mt-16">
-        <p className="text-[#EC1B1B] sm:text-base text-[14px] font-medium font-['DM_Sans'] leading-5 mb-7">
+        </div>) : ( 
+              <div className='flex gap-2 items-center'>
+              <button onClick={() => setToggleComp(true)} className="outline-none">
+             <img src={back} alt="" />
+           </button>
+           <h1 className="text-[#393939] text-[32px] font-bold font-['DM_Sans'] leading-10">History</h1>
+            </div>
+        ) } 
+
+      {/* top */}
+      
+
+      {  toggleComp ? ( <div className="flex flex-col items-start md:ml-[7rem] mt-16">
+        <p className="text-[#EC1B1B] sm:text-base text-[14px] font-medium font-['DM_Sans'] leading-5 mb-7 cursor-pointer">
           Clear history
         </p>
         <div className="w-full">
@@ -54,11 +74,11 @@ function History() {
                   <img src={openId === days.id && open ? arrowUp : arrowDown} alt="" className="w-[35px] h-[7px]" />
                 </button>
               </div>
-              {openId === days.id && open && <Errors id={days.id} />}
+              {openId === days.id && open && <Errors id={days.id}  setToggleComp = {setToggleComp} />}
             </>
           ))}
         </div>
-      </div>
+      </div>) :    <Correction /> }
     </div>
   );
 }

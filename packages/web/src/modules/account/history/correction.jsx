@@ -6,12 +6,12 @@ function Correction() {
   const history = useNavigate();
   return (
     <div className="flex flex-col pt-16 md:ml-[62px] md:mr-[9rem] sm:mx-[70px] mx-6">
-      <div className="flex items-center  justify-start gap-10">
+      {/* <div className="flex items-center  justify-start gap-10">
         <button onClick={() => history(-1)} className="outline-none">
           <img src={back} alt="" />
         </button>
         <h1 className="text-[#393939] text-[32px] font-bold font-['DM_Sans'] leading-10">History</h1>
-      </div>
+      </div> */}
       <div className=" md:ml-[5rem] mt-12">
         <div className="flex justify-between items-center">
           <p className="text-[#5A5A5A] sm:text-base text-[12px] font-normal leading-5 font-['Inter']">
