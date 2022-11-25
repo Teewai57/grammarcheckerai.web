@@ -10,6 +10,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import NoHistory from './noHistory';
 
 
 const historyDays = [
@@ -23,6 +24,11 @@ const historyDays = [
 
 function History() {
 
+  if (historyDays.length > 0) {
+    <History />
+  } else {
+    <NoHistory />
+  }
 
 
   const style = {
