@@ -18,7 +18,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<ConversationPage />} />
-      <Route path="/history" element={<h2>History</h2>} />
+      {/* <Route path="/history" element={<h2>History</h2>} /> */}
       <Route path="/gritty-grammar" element={<LandingPage/>} /> 
       <Route path="/home" element={<HomePage />} />
       <Route path="/history" element={<History />} />
